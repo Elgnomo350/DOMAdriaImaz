@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 // @ts-ignore
 import {changeSize, countWords, yellowSubmarine} from '../../../assets/funcions.js';
 // @ts-ignore
-import { TextService } from '../divadiv';
+import { TextService, Llibre } from '../divadiv';
 
 @Component({
   selector: 'app-prova',
@@ -24,6 +24,15 @@ export class Prova implements OnInit{
     countWords("ipsum")
     this.afegirImatge();
 
+  }
+
+  crearLlibre() {
+    const llibre = new Llibre(
+      "Pepe el mago",
+      ["Fantasia", "Aventura"]
+    );
+
+    this.textService.setLlibre(llibre);
   }
 
   majus () {
