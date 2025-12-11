@@ -8,3 +8,10 @@ export function changeSize(id, mida) {
   taula.style.fontSize = mida;
 }
 
+export function countWords(id1) {
+  const text = document.getElementById(id1).textContent.trim();
+  const paraules = text.split(/\s+/);
+  document.getElementById(id1).textContent = paraules.length;
+}
+
+

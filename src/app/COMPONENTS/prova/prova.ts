@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 // @ts-ignore
-import {changeSize, yellowSubmarine} from '../../../assets/funcions.js';
+import {changeSize, countWords, yellowSubmarine} from '../../../assets/funcions.js';
 @Component({
   selector: 'app-prova',
   standalone: true,
@@ -15,9 +15,9 @@ export class Prova implements OnInit{
   }
 
   ngOnInit() {
-    this.majus();
     yellowSubmarine("titolProva");
     changeSize("taula", "35px")
+    countWords("ipsum")
   }
 
   majus () {
