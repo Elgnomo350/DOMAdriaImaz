@@ -1,0 +1,4 @@
+.primera::first-letter {
+  font-size: 200%;
+  color: blue;
+}
