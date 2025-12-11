@@ -18,6 +18,8 @@ export class Prova implements OnInit{
     yellowSubmarine("titolProva");
     changeSize("taula", "35px")
     countWords("ipsum")
+    this.afegirImatge();
+
   }
 
   majus () {
@@ -31,5 +33,14 @@ mostrarUrl () {
   url.textContent = document.URL;
 }
 
+  afegirImatge() {
+    const img = document.createElement("img");
+    img.src = "https://dialprix.es/wp-content/uploads/IA-fresas.png";
+    img.alt = "Unas fresas";
+    img.width = 500;
+    img.style.border = "2px solid black";
+
+    document.body.appendChild(img);
+  }
 
 }
