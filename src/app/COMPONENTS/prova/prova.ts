@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 // @ts-ignore
 import {changeSize, countWords, yellowSubmarine} from '../../../assets/funcions.js';
+// @ts-ignore
+import { TextService } from '../divadiv';
+
 @Component({
   selector: 'app-prova',
   standalone: true,
@@ -9,8 +12,9 @@ import {changeSize, countWords, yellowSubmarine} from '../../../assets/funcions.
 })
 
 export class Prova implements OnInit{
+  private divadiv: any;
 
-  constructor() {
+  constructor(private textService: TextService) {
 
   }
 
@@ -43,4 +47,8 @@ mostrarUrl () {
     document.body.appendChild(img);
   }
 
+  guardarText() {
+    const t = document.getElementById("origen")!.textContent!;
+    this.textService.setText(t);
+  }
 }
